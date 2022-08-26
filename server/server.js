@@ -16,7 +16,6 @@ const httpServer = createServer.createServer(app);
 const io = require('socket.io')(httpServer, {
   cors: {
     // restrict to SOP (Same Origin Policy)
-
     origin: false,
   },
 });
@@ -325,7 +324,7 @@ async function getWireguardConfig(
 ) {
   const request1 = {
     method: 'post',
-    url: server + '/key',
+    url: server,
     headers: {
       'Content-Type': 'application/json',
       Authorization: process.env.AUTH,
