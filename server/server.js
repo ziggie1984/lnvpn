@@ -207,7 +207,7 @@ io.on('connection', (socket) => {
       index = invoiceWGKeysMap.findIndex((client) => {
         // console.log(currentTime - client.timestamp);
         // After 15 Minutes Invoice Related Date is purged from the memory
-        return currentTime - client.timestamp > 1000 * 60 * 15;
+        return currentTime - client.timestamp > 1000 * 60 * TIMERINVOICEDATA;
       });
       if (index !== -1) {
         invoiceWGKeysMap.splice(index, 1);
