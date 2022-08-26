@@ -338,7 +338,6 @@ async function getWireguardConfig(
     },
   };
 
-  console.log(request1);
   const response = await axios(request1).catch((error) => {
     throw new Error(`Error - wgAPI createKey\n ${error.message}`);
   });
